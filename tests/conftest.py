@@ -15,11 +15,11 @@ RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
 @pytest.fixture(scope='function')
 def setup_browser(request):
-    browser_version = "114.0.5735.198"
+    # browser_version = "114.0.5735.198"
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
-        "browserVersion": browser_version,
+        # "browserVersion": browser_version,
         "selenoid:options": {
             "enableVNC": True,
             "enableVideo": True
