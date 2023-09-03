@@ -13,7 +13,7 @@ PROJECT_PATH = os.path.dirname(FILE_PATH)
 RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
     browser_version = "114.0.5735.90"
     options = Options()

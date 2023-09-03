@@ -11,7 +11,7 @@ state = "NCR"
 city = "Delhi"
 
 
-def test_registration_students_form_positive(setup_browser):
+def test_registration_students_form_positive():
     registration_page = RegistrationPage()
     registration_page.fill_first_name(first_name)
     registration_page.fill_last_name(last_name)
