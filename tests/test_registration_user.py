@@ -1,7 +1,5 @@
 from pages.registration_page import RegistrationPage
 
-
-
 first_name = 'Ivan'
 last_name = 'Ivanov'
 email = 'qwerty@mail.ru'
