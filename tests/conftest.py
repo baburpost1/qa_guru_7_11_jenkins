@@ -15,7 +15,7 @@ RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
-    browser_version = "110.0"
+    browser_version = "100.0"
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",

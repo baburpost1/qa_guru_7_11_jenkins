@@ -20,7 +20,7 @@ def test_registration_students_form_positive():
     registration_page.type_subject('Math')
     registration_page.choose_hobbie('2')
     registration_page.choose_hobbie('3')
-    registration_page.choose_picture(f'../data/test.png')
+    registration_page.choose_picture('test.png')
     registration_page.type_current_adress(current_address)
     registration_page.choose_state(state)
     registration_page.is_enabled('[id="react-select-4-input"]')
