@@ -10,12 +10,12 @@ from utils import attach
 
 FILE_PATH = os.path.abspath(__file__)
 PROJECT_PATH = os.path.dirname(FILE_PATH)
-RESOURCE_PATH = os.path.join(PROJECT_PATH, 'data')
+RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
 
 @pytest.fixture(scope='function')
 def setup_browser(request):
-    browser_version = "100.0"
+    browser_version = "114.0.5735.198"
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
