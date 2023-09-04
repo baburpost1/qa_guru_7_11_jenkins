@@ -1,10 +1,10 @@
-from selene import  be, have, command
+from selene import be, have, command
 import os
 from tests.conftest import RESOURCE_PATH
 from tests.conftest import setup_browser
 from selene.support.shared import browser
 
-browser = setup_browser
+
 class RegistrationPage():
     def __init__(self):
         self.open()

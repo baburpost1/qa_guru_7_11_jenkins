@@ -13,7 +13,7 @@ RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
 
 @pytest.fixture(autouse=True)
-def setup_browser(request):
+def setup_browser():
     browser_version = "100.0"
     options = Options()
     selenoid_capabilities = {
@@ -31,7 +31,7 @@ def setup_browser(request):
     )
 
     browser = Browser(Config(driver))
-    yield browser
+    yield
 
     attach.add_screenshot(browser)
     attach.add_logs(browser)
