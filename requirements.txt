@@ -1,5 +1,4 @@
 selene==2.0.0b5
 pytest==7.1.2
 allure-pytest==2.9.45
-selenium==4.2.0
-webdriver-manager
+webdriver-manager>=3.8.6
