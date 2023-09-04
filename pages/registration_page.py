@@ -1,6 +1,9 @@
 from selene import browser, be, have, command
 import os
 from tests.conftest import RESOURCE_PATH
+from tests.conftest import setup_browser
+
+browser=setup_browser
 
 class RegistrationPage():
     def __init__(self):
