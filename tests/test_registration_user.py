@@ -11,7 +11,6 @@ city = "Delhi"
 
 
 def test_registration_students_form_positive():
-    browser.open("https://google.com")
     registration_page = RegistrationPage()
     registration_page.fill_first_name(first_name)
     registration_page.fill_last_name(last_name)
