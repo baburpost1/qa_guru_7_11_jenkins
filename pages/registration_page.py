@@ -1,7 +1,7 @@
 from selene import be, have, command
 import os
 from tests.conftest import RESOURCE_PATH
-from tests.conftest import setup_browser
+# from tests.conftest import setup_browser
 from selene.support.shared import browser
 
 
@@ -12,7 +12,7 @@ from selene import Browser, Config
 
 
 def setup_browser():
-    browser_version = "100.0"
+    browser_version = "100"
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
