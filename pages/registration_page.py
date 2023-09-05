@@ -1,38 +1,10 @@
 from selene import be, have, command
 import os
 from tests.conftest import RESOURCE_PATH
-# from tests.conftest import setup_browser
 from selene.support.shared import browser
 
 
-from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
-from selene import Browser, Config
-
-
-
-def setup_browser():
-    browser_version = "100"
-    options = Options()
-    selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": browser_version,
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
-    options.capabilities.update(selenoid_capabilities)
-    driver = webdriver.Remote(
-        command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
-        options=options
-    )
-
-    browser = Browser(Config(driver))
-    return browser
-
 class RegistrationPage():
-    browser=setup_browser()
     def __init__(self):
         self.open()
 
