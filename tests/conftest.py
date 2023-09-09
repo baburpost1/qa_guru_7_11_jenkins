@@ -3,7 +3,6 @@ import pytest
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selene import Browser, Config
 from utils import attach
 from selene.support.shared import browser
 
@@ -11,9 +10,14 @@ FILE_PATH = os.path.abspath(__file__)
 PROJECT_PATH = os.path.dirname(FILE_PATH)
 RESOURCE_PATH = os.path.join(PROJECT_PATH, 'resources')
 
+
+@pytest.fixture(scope="session")
+def load_env():
+    load_env()
+
+
 @pytest.fixture(autouse=True)
 def setup_browser():
-
     # Список всех доступных парамеров https://peter.sh/experiments/chromium-command-line-switches/
 
     browser.config.window_height = 1400
@@ -28,9 +32,11 @@ def setup_browser():
             "enableVideo": True
         }
     }
+    login = os.getenv('LOGIN')
+    password = os.getenv('PASSWORD')
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
 
